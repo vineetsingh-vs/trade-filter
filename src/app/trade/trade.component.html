@@ -1,0 +1,17 @@
+<div [ngClass]="!!loading ? 'loading' :  ''">
+  <div class="trade-header"></div>
+  <div class="trade-container">
+    <div class="trade-subheader">
+      <div class="trade-search">
+        <input [(ngModel)]="value" (keyup)="textChange()" class="input-search" placeholder="Search here">
+      </div>
+      <div class="trade-action">
+        <span (click)="quickFilter(stash, i)" [ngClass]="activeIndex === i ? 'active' : ''" class="action-button" *ngFor="let stash of tradeStashs; let i = index">{{stash}}</span>
+      </div>
+    </div>
+    <div class="right">
+      <app-trade-item [items]="items"></app-trade-item>
+    </div>
+  </div>
+</div>
+<app-loader *ngIf="loading"></app-loader>

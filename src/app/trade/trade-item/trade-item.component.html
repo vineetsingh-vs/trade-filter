@@ -1,0 +1,10 @@
+<table class="trade-grid">
+  <tr>
+    <th>Type Line</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let item of items" >
+    <td>{{item.typeLine || 'NA'}}</td>
+    <td>{{item.name || 'NA'}}</td>
+  </tr>
+</table>

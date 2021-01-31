@@ -61,6 +61,17 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "dev": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
           }
         },
@@ -72,6 +83,9 @@
           "configurations": {
             "production": {
               "browserTarget": "trade-filter:build:production"
+            },
+            "dev": {
+              "browserTarget": "trade-filter:build:dev"
             }
           }
         },
@@ -120,6 +134,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "trade-filter:serve:production"
+            },
+            "dev": {
+              "browserTarget": "trade-filter:build:dev"
             }
           }
         }
